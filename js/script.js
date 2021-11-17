@@ -1,5 +1,10 @@
 // PROVA
-const level = parseInt(prompt("Scegli il tuo livello di difficoltà"));
+let level = 0;
+
+do {
+level = parseInt(prompt("Scegli il tuo livello di difficoltà"));
+} while (level < 0 || level > 3){
+}
 console.log(level);
 
 const container = document.createElement('div');
@@ -10,26 +15,21 @@ console.log(container);
 if (level == 1){
     container.classList.add("easy")
 
-    for(let i = 0; i < 100; i++) {
-        addSquare();
-    }
+    addSquare();
+    colorSquare(100);
 
 } else if (level ==  2){
     container.classList.add("medium")
 
-    for(let i = 0; i < 81; i++) {
-        addSquare()
-    }
+    addSquare()
+    colorSquare(81);
 
 } else if (level == 3) {
     container.classList.add("hard")
 
-    for(let i = 0; i < 49; i++) {
-        addSquare();
-    }
+    addSquare();
+    colorSquare(49);
 }
-
-
 
 
 
@@ -44,3 +44,15 @@ function addSquare () {
 
     console.log(square);
 }
+
+function colorSquare (num) {
+for (let i = 0; i < num ; i++) {
+let square = addSquare();
+
+square = document.getElementsByClassName("square");
+square[i].addEventListener('click', function() {
+    square[i].classList.add('correct');
+  })
+ }
+}
+
