@@ -6,45 +6,28 @@ do {
 } while (level < 0 || level > 3) {}
 console.log(level);
 
-const container = document.createElement('div');
-container.className = "container";
-document.body.appendChild(container);
-console.log(container);
+const container = document.querySelector('.container');
 
 if (level == 1) {
     container.classList.add("easy")
 
-    // addSquare();
-    colorSquare(100);
+    addSquare(100);
 
 } else if (level == 2) {
     container.classList.add("medium")
 
-    // addSquare();
-    colorSquare(81);
+    addSquare(81);
 
 } else if (level == 3) {
     container.classList.add("hard")
 
-    // addSquare();
-    colorSquare(49);
+    addSquare(49);
 }
 
 
 
 
-
-
-
-// function addSquare() {
-//     const square = document.createElement('div')
-//     square.className = 'square';
-//     container.appendChild(square);
-
-//     console.log(square);
-// }
-
-function colorSquare(num) {
+function addSquare(num) {
     for (let i = 0; i < num; i++) {
         const square = document.createElement('div');
         square.className = 'square';
