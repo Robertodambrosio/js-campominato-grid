@@ -37,6 +37,16 @@ if (level == 1){
 
 
 
+function colorSquare (num) {
+for (let i = 1; i < num; i++) {
+let square = addSquare();
+square = document.getElementsByClassName("square");
+square[i].addEventListener('click', function() {
+    square[i].classList.add('correct');
+})
+}
+}
+
 function addSquare () {
     const square = document.createElement('div')
     square.className = 'square';
@@ -44,15 +54,3 @@ function addSquare () {
 
     console.log(square);
 }
-
-function colorSquare (num) {
-for (let i = 0; i < num ; i++) {
-let square = addSquare();
-
-square = document.getElementsByClassName("square");
-square[i].addEventListener('click', function() {
-    square[i].classList.add('correct');
-  })
- }
-}
-
