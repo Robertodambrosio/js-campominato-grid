@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
-}
 
 body {
     background-color: rgb(57, 57, 235);
@@ -30,15 +25,34 @@ body {
 }
 
 .container {
-    width: 500px;
-    height: 500px;
     margin: 30px auto;
     border: 2px solid white;
 }
 
+.easy {
+    width: 300px;
+    height: 300px;
+}
+
+.medium {
+    width: 270px;
+    height: 270px;
+}
+
+.hard {
+    width: 210px;
+    height: 210px;
+}
+
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 .square {
     float: left;
-    width: 0;
-    height: 0;
+    width: 30px;
+    height: 30px;
     border: 2px solid white;
 }
