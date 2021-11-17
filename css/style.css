@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body {
+    background-color: rgb(57, 57, 235);
+    height: 100vh;
+}
+
+#header {
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+}
+
+#footer {
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    margin: 30px auto;
+    border: 2px solid white;
+}
+
+.square {
+    float: left;
+    width: 0;
+    height: 0;
+    border: 2px solid white;
+}
