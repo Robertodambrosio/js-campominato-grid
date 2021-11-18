@@ -28,9 +28,10 @@ if (level == 1) {
 
 
 function addSquare(num) {
-    for (let i = 0; i < num; i++) {
+    for (let i = 1; i <= num; i++) {
         const square = document.createElement('div');
         square.className = 'square';
+        square.textContent = i;
         container.appendChild(square);
         square.addEventListener('click', function () {
             square.classList.add('correct');
